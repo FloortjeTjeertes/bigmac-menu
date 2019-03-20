@@ -1,0 +1,76 @@
+body {
+  margin:0em;
+  font-family: sans-serif;
+  background-color: #333;
+  overflow-x: hidden;
+}
+
+nav {
+  color: #ddd;
+  height: 100vh;
+}
+
+nav h4 {
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav a {
+  color: #ddd;
+  width: 9em;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  box-sizing: border-box;
+  background: #333;
+  cursor: pointer;
+  transition: background 1s ease-out;
+}
+
+nav a:hover {
+  background: #000;
+  color:#fff;
+}
+
+nav a.actief{
+  background:#000;
+  color: #fff;
+  border-right: solid 1em red;
+}
+
+main {
+
+  background:#fff;
+  padding: 2em;
+  width: 100vw;
+  box-sizing: border-box;
+  min-height: 108vh;
+}
+
+img {
+  float: left;
+  margin: 0 2em 1em;
+  max-width: 10%;
+}
+
+
+  #validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+}
+
+
+#togleLabel{
+  font-size: 2em;
+  font-family: sans-serif;
+}
+#togleMenu{
+  display: none;
+}

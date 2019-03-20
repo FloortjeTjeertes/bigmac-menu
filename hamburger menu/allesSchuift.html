@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>hamburger menu</title>
+  <meta name="author" content="Florian Tjeertes">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css.css">
+  <style>
+    #togleMenu:checked ~ main{
+      margin-left:8.9em;
+  }
+  #togleMenu:checked ~ nav{
+      margin-left:0;
+  }
+  #togleLabel::after{
+    content: "\2630";
+    cursor:pointer;
+  }
+  #togleMenu:checked ~main #togleLabel::after{
+    content: "\2715";
+  }
+  nav{
+position: fixed;
+margin-left: -9em;
+transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+}
+main{
+  position: absolute;
+  margin-left:0;
+  transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+}
+  </style>
+</head>
+
+<body lang="nl">
+  <input type="checkbox" id="togleMenu">
+  <nav>
+    <h4>menu</h4>
+    <ul>
+      <li>
+        <a href="index.html">inhoudschuift </a>
+      </li>
+      <li>
+        <a href="menuschuift.html">menuschuift </a>
+      </li>
+      <li>
+        <a href="allesSchuift.html" class="actief">alles schuift </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <label for="togleMenu" id="togleLabel"></label>
+    <p> <img src="https://m.media-amazon.com/images/M/MV5BYTViMTA1MzEtODgyZi00YmM2LTgzMjAtYTgxN2JiYjZlNzc4XkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_UY317_CR76,0,214,317_AL_.jpg" alt="shigeru miyamoto foto"></p>
+    <p> Video games are bad for you? That's what they said about rock-n-roll.</p>
+    <p> <a href="https://www.brainyquote.com/quotes/shigeru_miyamoto_184192">Shigeru Miyamoto</a></p>
+
+
+
+    <footer class="validatie">
+      <div id="validatie">
+        <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+          <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+        </a>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
