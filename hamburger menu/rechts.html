@@ -8,23 +8,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css.css">
   <style>
-  #togleMenu:checked ~ main{
-      margin-left:8.9em;
+  #togleMenu:checked ~ nav{
+      margin-right: 0em;
+    z-index: 1;
   }
   #togleLabel::after{
     content: "\2630";
     cursor:pointer;
+    float:right;
   }
-  #togleMenu:checked ~main #togleLabel::after{
+  #togleMenu:checked ~main #togleLabel:after{
+margin-right:  5em;
+
     content: "\2715";
+    transition: margin-right .6s cubic-bezier(.17,.67,.83,1.36);
   }
   nav{
+    background-color: #333;
 position: fixed;
+right: 0;
+margin-right: -10em;
+  transition: margin-right .6s cubic-bezier(.17,.67,.83,1.36);
+
+
 }
 main{
-  position: absolute;
-  margin-left:0;
-  transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+  position: fixed;
+  margin-right:0;
+
 }
   </style>
 </head>
@@ -35,7 +46,7 @@ main{
     <h4>menu</h4>
     <ul>
       <li>
-        <a href="index.html" class="actief">inhoudschuift </a>
+        <a href="index.html">inhoudschuift </a>
       </li>
       <li>
         <a href="menuschuift.html">menuschuift </a>
@@ -44,11 +55,10 @@ main{
         <a href="allesSchuift.html">alles schuift </a>
       </li>
       <li>
-        <a href="rechts.html">rechts </a>
+        <a href="rechts.html" class="actief">rechts </a>
       </li>
 
     </ul>
-
   </nav>
 <main>
 <label for="togleMenu" id="togleLabel"></label>
